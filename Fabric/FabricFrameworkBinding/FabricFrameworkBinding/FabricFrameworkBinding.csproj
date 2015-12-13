@@ -42,13 +42,19 @@
     <Compile Include="libFabric.linkwith.cs">
       <DependentUpon>libFabric.a</DependentUpon>
     </Compile>
-    <Compile Include="StructsAndEnums.cs" />
+    <Compile Include="Crashlytics.linkwith.cs">
+      <DependentUpon>Crashlytics.a</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
   <ItemGroup>
     <ObjcBindingNativeLibrary Include="libFabric.a" />
+    <ObjcBindingNativeLibrary Include="Crashlytics.a" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
 </Project>
